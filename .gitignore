@@ -6,6 +6,7 @@ src\components\SpotifyDashboard.vue
 src\components\TrackSearchResult.vue
 src\components\Player.vue
 src\components\UseAuth.vue
+tailwind.config.js
 
 # local env files
 .env.local
