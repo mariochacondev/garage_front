@@ -1,11 +1,11 @@
 .DS_Store
 node_modules
 /dist
-src\components\Spotify.vue
-src\components\SpotifyDashboard.vue
-src\components\TrackSearchResult.vue
-src\components\Player.vue
-src\components\UseAuth.vue
+Spotify.vue
+SpotifyDashboard.vue
+TrackSearchResult.vue
+Player.vue
+UseAuth.vue
 tailwind.config.js
 server
 
