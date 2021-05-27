@@ -7,6 +7,7 @@ src\components\TrackSearchResult.vue
 src\components\Player.vue
 src\components\UseAuth.vue
 tailwind.config.js
+server
 
 # local env files
 .env.local
