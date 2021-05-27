@@ -5,19 +5,32 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-css": "tailwind build src/styles.css -o public/styles.css"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "postcss-import": "^14.0.1",
+    "spotify-web-api-node": "^5.0.2",
+    "vue": "^2.6.11",
+    "vue-aplayer": "^1.6.1",
+    "vue-axios": "^3.2.4",
+    "vue-hooks": "^0.3.2",
+    "vue-player": "^1.0.2",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
