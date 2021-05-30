@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="logOutBox">
-      <button class="btnLogOut" v-on:click="logOut">LogOut</button>
+      <button class="btnLogOut" v-on:click="logOut">Deconnexion</button>
     </div>
      <div class="welcomeBox">
-        <h1>Welcome to Garage, {{ username }}, you are Signed In</h1>
+        <h1>Bienvenue chez Garage {{ username }}, t'es connecté !</h1>
     </div>
     <!-- <div v-if="code">
       <SpotifyDashboard v-bind= {code} />
@@ -13,7 +13,9 @@
       <Spotify />
     </div> -->
     <div>
-      <Embed />
+      <h2> Selection des Playlists de cette semaine </h2>
+      <p> Cette semaine DeepInside est sur le top </p>
+      <Embed1 />
     </div>
 
   </div>
@@ -25,7 +27,7 @@
 
 
 
-import Embed from './Embed'
+import Embed1 from './Embed1'
 // import Spotify from './Spotify'
 // import SpotifyDashboard from './SpotifyDashboard'
 
@@ -39,7 +41,7 @@ Vue.use(VueAxios,axios)
 export default {
   name: 'Home',
   components: {
-    Embed,
+    Embed1,
     // Spotify,
     // SpotifyDashboard
   },
@@ -110,10 +112,16 @@ export default {
 
 <style scoped>
 .container {
-  @apply font-text;
+  @apply font-text m-auto w-screen md:w-full;
 },
 h1 {
+  @apply text-3xl p-0;
+}
+h2{
   @apply text-2xl p-0;
+}
+p{
+  @apply text-xl p-0;
 }
 .welcomeBox {
    @apply flex justify-center items-center m-5 pb-5;

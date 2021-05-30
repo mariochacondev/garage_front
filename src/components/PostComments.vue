@@ -1,8 +1,8 @@
 <template>
     <div class="containerPost">
-        <textarea placeholder="Add Comment" name="comment" v-model="formData.message"></textarea>
+        <textarea placeholder="Votre message" name="comment" v-model="formData.message"></textarea>
         <br>
-        <button class="btnSubmit" @click="saveComment">Submit Comment</button>
+        <button class="btnSubmit" @click="saveComment">Ajouter un commentaire</button>
     </div>
 </template>
 

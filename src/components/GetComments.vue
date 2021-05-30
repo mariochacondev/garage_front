@@ -1,16 +1,16 @@
 <template>
 <div class="container">
         <div>
-           <p> {{this.number}} COMMENTS </p>
+           <p> {{this.number}} COMMENTAIRES </p>
         </div>
       <div id="commentsScroll" class="comment-box">
           <section v-for="(comment, index) in comments" :key="index">
               <div class="comment">
                 <p>{{comment.message}}</p>
               </div>
-                <p class="postedBy">Posted By: {{comment.postedBy.username}}</p>
+                <p class="postedBy">Posté par: {{comment.postedBy.username}}</p>
               <div v-if="username === comment.postedBy.username">
-                <button class="btnDelete" @click="deleteComment(comment._id)">Delete Comment</button>
+                <button class="btnDelete" @click="deleteComment(comment._id)">Effacer commentaire</button>
               </div>
           </section>
       </div>
@@ -50,9 +50,9 @@ export default {
 
 
     this.getComments();
-    // this.interval = setInterval(function() {
-    //   this.getComments()
-    // }.bind(this), 500);
+    this.interval = setInterval(function() {
+      this.getComments()
+    }.bind(this), 50000);
   },
   methods: {
       getComments(){
@@ -102,7 +102,7 @@ export default {
 
 <style scoped>
 .container {
-  @apply max-w-xs md:max-w-2xl bg-garageBlack-medium rounded-xl font-text;
+  @apply max-w-xs md:max-w-6xl bg-garageBlack-medium rounded-xl font-text;
 }
 h1 {
   @apply text-base;
@@ -121,7 +121,7 @@ h2 {
 
 }
 .comment-box {
-  @apply md:max-w-full p-2 border-solid border-2 border-garageBlack-solid max-w-md max-h-40 overflow-auto rounded-lg;
+  @apply md:max-w-full p-2 border-solid border-2 border-garageBlack-solid max-w-md max-h-80 overflow-auto rounded-lg;
 }
 .addComment {
   @apply py-2;

@@ -2,11 +2,11 @@
     <form>
         <div>
             <div class="container">
-              <h1>Saisi votre email et mot de pass</h1>
+              <h1>Saisis ton email et mot de pass</h1>
                 <div class="detailsContainer">
                   <input type="email" v-model="email" placeholder="Email"/>
                 <br>
-                  <input type="password" v-model="password" placeholder="Password"/>
+                  <input type="password" v-model="password" placeholder="Mot de pass"/>
                 <br>
                   <button v-on:click="login">Se connecter</button>
                 <br>
@@ -64,8 +64,12 @@ h1 {
   @apply text-lg;
 }
 
+button {
+  @apply rounded-full text-sm py-2 px-3 border-2 border-garageBlue-One bg-garageBlue-Three hover:bg-garageBlack-light hover:text-white
+}
+
 .container {
-  @apply block font-text;
+  @apply block w-screen m-auto font-text;
 }
 
 .detailsContainer {
@@ -73,6 +77,6 @@ h1 {
 }
 
 input {
-  @apply m-3 text-garageBlack-solid;
+  @apply m-3 p-1 text-garageBlack-solid;
 }
 </style>
